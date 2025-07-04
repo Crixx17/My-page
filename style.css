@@ -1,14 +1,165 @@
-
-
-body
-{
-    background-image: url(/164909-ambiente-universo-objeto_astronomico-ciencia-estrella-7680x4320.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;     /* Opcional: efecto parallax en desktop */
-  min-height: 100vh;                /* Asegura que cubra al menos toda la altura de la pantalla */
-  margin: 0;                        /* Quita márgenes por defecto */
-    padding: 0;
+body{
+  background-color: #fbf579;
 }
+h1
+{
+  font-family: Tektur;
+  font-size: 20px;
+  font-weight: 700;
+  filter: drop-shadow(1px 1px 1px red);
+  margin-left: 10px;
+  
+}
+.botones
+{
+margin-top: -37px;
+  margin-left: 75%;
+  
+}
+.botones button
+{
+  background-color: red;
+  font-family: Tektur;
+  font-weight: 500;
+  border: 2px solid;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 1px #f43a09;
+
+}
+.imagenpng
+{
+  width: 250px;
+  height: 250px;
+  background-image: url(/image.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 15%;
+  
+  
+}
+.contenedorimg
+{
+  padding-top: 40px;
+}
+.sobre_mi
+{
+  width: 400px;
+  height: 250px;
+  font-family: Tektur;
+  font-size: 14px;
+  font-weight: 500;
+  filter: drop-shadow(1px 1px 1px red);
+  margin-left: 50%;
+  margin-top: -25%;
+  border: solid 1px;
+  padding: 20px;
+  box-shadow: 1px 1px 1px 1px red;
+  
+}
+.habilidades
+{
+  font-family: Tektur;
+  font-size: 14px;
+  font-weight: 500;
+  filter: drop-shadow(1px 1px 1px red);
+  margin-left: 10px;
+  text-align: center;
+  padding-top: 20px;
+}
+.logohtml
+{
+  width: 80px;
+  height: 80px;
+  background-image: url(/image\ copy.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 100px ;
+}
+
+.logocss
+{
+  width: 80px;
+  height: 80px;
+  background-image: url(/image\ copy\ 2.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  margin-top: -80px;
+}
+.logojs
+{
+  width: 80px;
+  height: 80px;
+  background-image: url(/image\ copy\ 3.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 820px;
+  margin-top: -80px;
+}
+.linea
+{
+  background-color: black;
+  width: 900px;
+  height: 4px;
+  margin-top: 10px ;
+ margin-left: 38px;
+  border-radius: 50px;
+  box-shadow: 1px 1px 10px 3px red;
+}
+/* Mantengo tu diseño original aquí arriba */
+
+/* Adaptación responsive para móviles */
+@media (max-width: 768px) {
+  .botones {
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .imagenpng {
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+  }
+  .sobre_mi {
+    width: 90%;
+    margin: 20px auto;
+    height: auto;
+    margin-top: 10px;
+  }
+  .logohtml, .logocss, .logojs {
+    margin: 10px auto;
+  }
+  .logojs {
+    margin-top: 10px;
+  }
+  .linea {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas (teléfonos muy estrechos) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+    text-align: center;
+    margin-left: 0;
+  }
+  .botones button {
+    font-size: 12px;
+    padding: 5px;
+  }
+  .imagenpng {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
 
