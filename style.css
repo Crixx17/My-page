@@ -111,15 +111,7 @@ margin-top: -30px;
   margin-left: 820px;
   margin-top: -80px;
 }
-.bandera
-{
-  width: 25px;
-  height: 20px;
-    background-image: url(bandera.png);
-    background-position: center;
-    background-size: cover;
-    margin-left: 200px;
-    margin-top: -35px;
+
 }
 .linea
 {
