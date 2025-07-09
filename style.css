@@ -1,5 +1,16 @@
 body{
   background-color: #fbf579;
+  margin: 0;
+  height: 100vh;
+  border: 5px solid #fbf579; /* color inicial */
+  animation: bordeAnimado 2s infinite alternate;
+  box-sizing: border-box;
+}
+/* Animación */
+@keyframes bordeAnimado {
+  0%   { border-color: #fbf579; } /* amarillo claro */
+  100% { border-color: red; }
+  
 }
 h1
 {
@@ -12,7 +23,7 @@ h1
 }
 .botones
 {
-margin-top: -37px;
+margin-top: -30px;
   margin-left: 75%;
   
 }
@@ -100,6 +111,16 @@ margin-top: -37px;
   margin-left: 820px;
   margin-top: -80px;
 }
+.bandera
+{
+  width: 25px;
+  height: 20px;
+    background-image: url(bandera.png);
+    background-position: center;
+    background-size: cover;
+    margin-left: 200px;
+    margin-top: -35px;
+}
 .linea
 {
   background-color: black;
@@ -160,6 +181,74 @@ margin-top: -37px;
     height: 150px;
   }
 }
+/* Fondo principal */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fbf579;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.background span {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: red;
+  opacity: 0.5;
+  border-radius: 50%; /* Circulares, puedes cambiar por cuadrados si quieres */
+  animation: move 10s linear infinite;
+}
+
+/* Posiciones iniciales aleatorias para las partículas */
+.background span:nth-child(1) { left: 10%; animation-delay: 0s; }
+.background span:nth-child(2) { left: 20%; animation-delay: 2s; }
+.background span:nth-child(3) { left: 25%; animation-delay: 4s; }
+.background span:nth-child(4) { left: 40%; animation-delay: 1s; }
+.background span:nth-child(5) { left: 55%; animation-delay: 3s; }
+.background span:nth-child(6) { left: 65%; animation-delay: 5s; }
+.background span:nth-child(7) { left: 70%; animation-delay: 2s; }
+.background span:nth-child(8) { left: 80%; animation-delay: 4s; }
+.background span:nth-child(9) { left: 90%; animation-delay: 6s; }
+.background span:nth-child(10) { left: 95%; animation-delay: 1s; }
+.background span:nth-child(11) { left: 10%; animation-delay: 0s; }
+.background span:nth-child(12) { left: 20%; animation-delay: 2s; }
+.background span:nth-child(13) { left: 25%; animation-delay: 4s; }
+.background span:nth-child(14) { left: 40%; animation-delay: 1s; }
+.background span:nth-child(15) { left: 55%; animation-delay: 3s; }
+.background span:nth-child(16) { left: 65%; animation-delay: 5s; }
+.background span:nth-child(17) { left: 70%; animation-delay: 2s; }
+.background span:nth-child(18) { left: 80%; animation-delay: 4s; }
+.background span:nth-child(19) { left: 90%; animation-delay: 5s; }
+.background span:nth-child(20) { left: 95%; animation-delay: 1s; }
+
+/* Animación */
+@keyframes move {
+  0% {
+    top: -10%;
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 110%;
+    transform: translateY(100vh) scale(2.2);
+    opacity: 0.1;
+  }
+}
+
 
 
 
