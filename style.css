@@ -31,14 +31,14 @@ h1 {
 /* Botones de navegación */
 .botones {
     display: flex; /* Usa flexbox para los botones */
-    gap: 10px; /* Espacio entre botones */
+    gap: 15px; /* Espacio entre botones */
     flex-wrap: wrap; /* Permite que los botones salten de línea si no caben */
     margin-top: 10px;
     justify-content: center; /* Centrar botones */
 }
 
 .botones button {
-    background-color: red;
+    background-color: #f43a09;
     font-family: Tektur;
     font-weight: 500;
     border: 2px solid;
@@ -114,7 +114,7 @@ h1 {
     padding: 20px;
 }
 
-.logohtml, .logocss, .logojs {
+.logohtml, .logocss, .logojs, .excel, .word, .linux, .sql{
     width: 80px;
     height: 80px;
     background-position: center;
@@ -136,6 +136,20 @@ h1 {
     background-image: url(imagecopy.png);
 }
 
+.excel{
+    background-image: url(imageecopy.png);
+}
+
+.word{
+    background-image: url(imagewcopy.png);
+}
+.linux{
+    background-image: url(imagelcopy.png);
+}
+.sql{
+    background-image: url(imagescopy.png);
+}
+
 /* Línea divisoria */
 .linea {
     background-color: black;
@@ -146,6 +160,7 @@ h1 {
     border-radius: 50px;
     box-shadow: 1px 1px 10px 3px red;
 }
+
 
 /* Fondo con spans (sin cambios, ya que no afectan el layout) */
 .background {
@@ -310,6 +325,3 @@ h1 {
         gap: 20px;
     }
 }
-
-
-
