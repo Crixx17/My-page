@@ -1,167 +1,315 @@
-body{
-background: -webkit-linear-gradient(90deg, #ffd700,#ff8c00,#ff4500);background: linear-gradient(90deg, #ffd700,#ff8c00,#ff4500);
-}
-h1
-{
-  font-family: Tektur;
-  font-size: 20px;
-  font-weight: 700;
-  filter: drop-shadow(1px 1px 1px red);
-  margin-left: 10px;
-  
-}
-.botones
-{
-margin-top: -37px;
-  margin-left: 75%;
-  
-}
-.botones button
-{
-  background-color: red;
-  font-family: Tektur;
-  font-weight: 500;
-  border: 2px solid;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px 1px #f43a09;
-
-}
-.imagenpng
-{
-  width: 250px;
-  height: 250px;
-  background-image: url(image.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: 15%;
-  
-  
-}
-.contenedorimg
-{
-  padding-top: 40px;
-}
-.sobre_mi
-{
-  width: 400px;
-  height: 250px;
-  font-family: Tektur;
-  font-size: 14px;
-  font-weight: 500;
-  filter: drop-shadow(1px 1px 1px red);
-  margin-left: 50%;
-  margin-top: -25%;
-  border: solid 1px;
-  padding: 20px;
-  box-shadow: 1px 1px 1px 1px red;
-  
-}
-.habilidades
-{
-  font-family: Tektur;
-  font-size: 14px;
-  font-weight: 500;
-  filter: drop-shadow(1px 1px 1px red);
-  margin-left: 10px;
-  text-align: center;
-  padding-top: 20px;
-}
-.logohtml
-{
-  width: 80px;
-  height: 80px;
-  background-image: url(imagecopy3.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: 100px ;
+/* Estilos generales del body y h1 */
+body {
+    background: -webkit-linear-gradient(90deg, #ffd700, #ff8c00, #ff4500);
+    background: linear-gradient(90deg, #ffd700, #ff8c00, #ff4500);
+    font-family: 'Tektur', sans-serif; /* Aplica la fuente Tektur a todo el body */
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el padding predeterminado del body */
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho/alto */
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    position: relative; /* Necesario para posicionar el background de spans */
+    overflow-x: hidden; /* Evita scroll horizontal por elementos que se salgan */
 }
 
-.logocss
-{
-  width: 80px;
-  height: 80px;
-  background-image: url(imagecopy2.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin: auto;
-  margin-top: -80px;
+h1 {
+    font-size: 30px; /* Aumenta un poco el tamaño para mejor visibilidad */
+    font-weight: 700;
+    filter: drop-shadow(1px 1px 1px red);
+    margin-left: 20px; /* Margen para h1 */
+    padding-top: 20px; /* Espacio superior */
 }
-.logojs
-{
-  width: 80px;
-  height: 80px;
-  background-image: url(imagecopy.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: 820px;
-  margin-top: -80px;
-}
-.linea
-{
-  background-color: black;
-  width: 900px;
-  height: 4px;
-  margin-top: 10px ;
-  margin-left: 38px;
-  border-radius: 50px;
-  box-shadow: 1px 1px 10px 3px red;
-}
-/* Mantengo tu diseño original aquí arriba */
 
-/* Adaptación responsive para móviles */
-@media (max-width: 768px) {
-  .botones {
-    margin-left: 10px;
+/* Contenedor principal para organizar la parte superior */
+.header-content {
+    display: flex; /* Usa flexbox para alinear elementos horizontalmente */
+    flex-direction: column; /* Por defecto, apilados en columnas en móviles */
+    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Botones de navegación */
+.botones {
+    display: flex; /* Usa flexbox para los botones */
+    gap: 10px; /* Espacio entre botones */
+    flex-wrap: wrap; /* Permite que los botones salten de línea si no caben */
     margin-top: 10px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  .imagenpng {
-    margin: 20px auto;
-    width: 200px;
-    height: 200px;
-  }
-  .sobre_mi {
-    width: 90%;
-    margin: 20px auto;
-    height: auto;
-    margin-top: 10px;
-  }
-  .logohtml, .logocss, .logojs {
-    margin: 10px auto;
-  }
-  .logojs {
-    margin-top: 10px;
-  }
-  .linea {
-    width: 90%;
-    margin: 20px auto;
-  }
+    justify-content: center; /* Centrar botones */
 }
 
-/* Ajustes para pantallas muy pequeñas (teléfonos muy estrechos) */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 18px;
+.botones button {
+    background-color: red;
+    font-family: Tektur;
+    font-weight: 500;
+    border: 2px solid;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px #f43a09;
+    padding: 8px 15px; /* Añade padding para mejor aspecto */
+    cursor: pointer; /* Indica que es un elemento cliqueable */
+    color: #ffd700 /* Color del texto para contraste */
+}
+
+/* Sección de imagen y sobre mi */
+.about-section {
+    display: flex; /* Usa flexbox para la imagen y el texto */
+    flex-direction: column; /* Por defecto, apilados en columnas en móviles */
+    align-items: center; /* Centra los elementos */
+    gap: 30px; /* Espacio entre la imagen y el texto */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contenedorimg {
+    padding-top: 0; /* Ya no es necesario este padding aquí */
+}
+
+.imagenpng {
+    width: 250px;
+    height: 250px;
+    background-image: url(image.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* margin-left ya no es necesario, flexbox se encarga del centrado */
+}
+
+.sobre_mi {
+    width: 90%; /* Ancho flexible para adaptarse a la pantalla */
+    max-width: 600px; /* Ancho máximo para que no se vea demasiado ancho en pantallas grandes */
+    height: auto; /* Altura automática para que el contenido fluya */
+    font-family: Tektur;
+    font-size: 14px;
+    font-weight: 500;
+    filter: drop-shadow(1px 1px 1px red);
+    border: solid 1px;
+    padding: 20px;
+    box-shadow: 1px 1px 1px 1px red;
+    text-align: justify; /* Justificar texto para mejor lectura */
+    line-height: 1.5; /* Espaciado entre líneas */
+    box-sizing: border-box; /* Incluir padding y borde en el ancho total */
+    /* Los márgenes negativos ya no son necesarios gracias a flexbox */
+}
+.sobre_mi h2 {
+    text-align: center; /* Centrar el título "Sobre mi" */
+    margin-top: 0; /* Eliminar margen superior predeterminado */
+}
+
+/* Sección de Habilidades */
+.habilidades {
+    font-family: Tektur;
+    font-size: 20px; /* Tamaño de fuente un poco más grande para título */
+    font-weight: 500;
+    filter: drop-shadow(1px 1px 1px red);
     text-align: center;
-    margin-left: 0;
-  }
-  .botones button {
-    font-size: 12px;
-    padding: 5px;
-  }
-  .imagenpng {
-    width: 150px;
-    height: 150px;
-  }
+    padding-top: 40px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Contenedor para los logos de habilidades */
+.logos-habilidades {
+    display: flex; /* Usa flexbox para alinear los logos */
+    flex-direction: column; /* Por defecto, apilados en móviles */
+    align-items: center; /* Centra los logos horizontalmente */
+    gap: 20px; /* Espacio entre logos */
+    padding: 20px;
+}
+
+.logohtml, .logocss, .logojs {
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Eliminar márgenes fijos o negativos */
+}
+
+.logocss {
+    background-image: url(imagecopy2.png);
+    background-size: contain; /* Para que el logo CSS se vea completo si tiene espacio */
+}
+
+.logohtml {
+    background-image: url(imagecopy3.png);
+}
+
+.logojs {
+    background-image: url(imagecopy.png);
+}
+
+/* Línea divisoria */
+.linea {
+    background-color: black;
+    width: 90%; /* Ancho flexible */
+    max-width: 900px; /* Ancho máximo */
+    height: 4px;
+    margin: 40px auto; /* Centrar y dar espacio */
+    border-radius: 50px;
+    box-shadow: 1px 1px 10px 3px red;
+}
+
+/* Fondo con spans (sin cambios, ya que no afectan el layout) */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* ... tus estilos de spans ... */
+    z-index: -1; /* Envía los spans al fondo */
+    overflow: hidden; /* Asegura que no generen scroll */
+}
+.background span {
+    width: 6vmin;
+    height: 6vmin;
+    border-radius: 16vmin;
+    background: #ff4500;
+    position: absolute;
+    animation: move 10s linear infinite;
+}
+.background span:nth-child(1) {
+    left: 3%;
+    animation-delay: 2s;
+}
+.background span:nth-child(2) {
+    left: 70%;
+    animation-delay: 4s;
+}
+.background span:nth-child(3) {
+    left: 20%;
+    animation-delay: 6s;
+}
+.background span:nth-child(4) {
+    left: 90%;
+    animation-delay: 8s;
+}
+.background span:nth-child(5) {
+    left: 10%;
+    animation-delay: 10s;
+}
+.background span:nth-child(6) {
+    left: 50%;
+    animation-delay: 10s;
+}
+.background span:nth-child(7) {
+    left: 70%;
+    animation-delay: 14s;
+}
+.background span:nth-child(8) {
+    left: 95%;
+    animation-delay: 16s;
+}
+.background span:nth-child(9) {
+    left: 40%;
+    animation-delay: 18s;
+}
+.background span:nth-child(10) {
+    left: 80%;
+    animation-delay: 20s;
+}
+.background span:nth-child(11) {
+    left: 15%;
+    animation-delay: 22s;
+}
+.background span:nth-child(12) {
+    left: 60%;
+    animation-delay: 24s;
+}
+.background span:nth-child(13) {
+    left: 25%;
+    animation-delay: 26s;
+}
+.background span:nth-child(14) {
+    left: 85%;
+    animation-delay: 28s;
+}
+.background span:nth-child(15) {
+    left: 5%;
+    animation-delay: 30s;
+}
+.background span:nth-child(16) {
+    left: 45%;
+    animation-delay: 32s;
+}
+.background span:nth-child(17) {
+    left: 75%;
+    animation-delay: 34s;
+}
+.background span:nth-child(18) {
+    left: 30%;
+    animation-delay: 36s;
+}
+.background span:nth-child(19) {
+    left: 90%;
+    animation-delay: 38s;
+}
+.background span:nth-child(20) {
+    left: 55%;
+    animation-delay: 40s;
+}
+@keyframes move {
+    0% {
+        transform: translateY(-10vh) scale(1);
+    }
+    100% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
 }
 
 
+/* --- Media Queries para pantallas más grandes (Desktop) --- */
+@media (min-width: 769px) {
+    /* Aquí definimos cómo se verán los elementos en pantallas de escritorio */
+
+    .header-content {
+        flex-direction: row; /* En desktop, alinear h1 y botones en fila */
+        justify-content: space-between; /* Espacio entre h1 y botones */
+        align-items: center; /* Alinear verticalmente */
+    }
+
+    h1 {
+        margin-left: 20px; /* Mantener margen a la izquierda */
+        padding-top: 0;
+    }
+
+    .botones {
+        margin-right: 20px; /* Margen a la derecha para que no se peguen */
+        margin-top: 0; /* Eliminar margen negativo o superior */
+    }
+
+    .about-section {
+        flex-direction: row; /* En desktop, la imagen y el texto van en fila */
+        justify-content: center; /* Centrar la sección */
+        align-items: flex-start; /* Alinear elementos al inicio (arriba) */
+        margin-top: 50px; /* Espacio superior */
+    }
+
+    .imagenpng {
+        margin-left: 0; /* Eliminar margen fijo si lo había */
+        margin-right: 30px; /* Espacio a la derecha de la imagen */
+    }
+
+    .sobre_mi {
+        margin-left: 0; /* Eliminar márgenes fijos o negativos */
+        margin-top: 0;
+        width: 50%; /* Ocupa más espacio en desktop */
+        max-width: 600px;
+    }
+
+    .logos-habilidades {
+        flex-direction: row; /* En desktop, los logos van en fila */
+        justify-content: center; /* Centrar los logos */
+        gap: 50px; /* Más espacio entre logos */
+    }
+}
+
+/* Puedes añadir más puntos de ruptura si lo necesitas, por ejemplo, para tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Estilos específicos para tabletas si es necesario */
+    .about-section {
+        gap: 20px;
+    }
+}
 
 
 
